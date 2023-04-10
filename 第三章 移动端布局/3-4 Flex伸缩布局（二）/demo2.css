@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.box {
+    height: 500px;
+    border: 1px solid #ccc;
+
+    display: flex;
+    /*让子集换行*/
+    flex-wrap: wrap;
+
+    align-content:space-around;
+    
+
+}
+
+.box div {
+    width: 100px;
+    height: 100px;
+    background-color: #6c99c5;
+}

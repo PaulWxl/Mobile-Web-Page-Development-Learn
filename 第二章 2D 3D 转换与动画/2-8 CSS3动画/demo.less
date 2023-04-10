@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: skyblue;
+    margin: 100px auto;
+    animation: changeWidth 1s steps(2) infinite 5s;
+    // 需要注意的是，动画持续时间必须写在动画延迟时间的前面 
+
+    /*动画名称和动画持续时间是必须写的属性，否则动画无效*/
+}
+@keyframes changeWidth {
+    from {
+        width: 200px;
+    }
+    to {
+        width: 400px;
+        // background-color: pink;
+    }
+}
+@keyframes move2 {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -1260px 0;
+    }
+}
+.box2 {
+    width: 180px;
+    height: 300px;
+    border: 1px solid #000;
+    margin: 200px auto;
+
+    background-image: url(../精灵图逐帧动画1.png);
+
+    // 添加动画
+    // 7是精灵图中图的个数，要使用分步动画
+    // infinite是无限的意思
+    animation: move2 2s steps(7) infinite;
+}
+.box3 {
+    width: 80px;
+    height: 70px;
+    border: 1px solid #000;
+    margin: 200px auto;
+
+
+    background-image: url(../精灵图逐帧动画2.png);
+    animation: move3 1s steps(9) infinite;
+}
+@keyframes move3 {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 -630px;
+    }
+}
+.box4 {
+    margin: 100px auto;
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    animation: changeWid 5s linear infinite 2s;
+}
+@keyframes changeWid {
+    0% {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+    }
+    50% {
+        width: 300px;
+        height: 300px;
+        background-color: #6c99c5;
+    }
+
+    100% {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+    }
+}

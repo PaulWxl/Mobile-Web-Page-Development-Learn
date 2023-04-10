@@ -1,0 +1,28 @@
+.container {
+  width: 1240px;
+  margin: 0 auto;
+}
+.father {
+  color: pink;
+}
+.father .son {
+  color: pink;
+}
+.father {
+  color: green;
+}
+.father .son {
+  color: green;
+}
+.box {
+  background-color: green;
+}
+.box .aaa {
+  color: green;
+}
+.xtx-main-nav {
+  width: 210px;
+  height: 220px;
+  width: 1.81333333rem;
+  height: 0.90666667rem;
+}

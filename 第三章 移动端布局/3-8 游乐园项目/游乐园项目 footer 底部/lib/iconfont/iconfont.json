@@ -1,0 +1,30 @@
+{
+  "id": "3768510",
+  "name": "游乐园 footer 底部",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "629343",
+      "name": "首页",
+      "font_class": "shouye",
+      "unicode": "e64f",
+      "unicode_decimal": 58959
+    },
+    {
+      "icon_id": "5392460",
+      "name": "我的",
+      "font_class": "wode",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
+      "icon_id": "9851601",
+      "name": "卡券",
+      "font_class": "kaquan",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    }
+  ]
+}

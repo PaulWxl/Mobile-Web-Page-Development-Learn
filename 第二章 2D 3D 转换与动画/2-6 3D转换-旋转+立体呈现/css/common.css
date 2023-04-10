@@ -1,0 +1,35 @@
+html {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.box {
+  width: 400px;
+  height: 400px;
+  background-color: green;
+  margin: 100px auto;
+  transition: all 0.5s;
+}
+.box:hover {
+  transform: translateZ(200px);
+  transform: rotate(360deg);
+}
+.box2 {
+  width: 300px;
+  margin: 100px auto;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  /*立体转换*/
+}
+.box2 img {
+  width: 100%;
+  transition: all 0.5s;
+}
+.box2 img:hover {
+  transform: rotateX(90deg);
+  transform: rotateZ(60deg);
+  transform: rotateY(60deg);
+}

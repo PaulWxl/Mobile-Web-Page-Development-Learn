@@ -1,0 +1,96 @@
+body {
+    background-color: #ccc;
+}
+.main {
+    padding: 12px 11px 80px;
+}
+.red {
+    color: #cf4444;
+}
+.pannel {
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 9px;
+}
+.top {
+    display: flex;
+    margin-top: -13px;
+}
+.user_msg {
+    padding: 15px 0 15px 11px;
+    display: flex;
+    align-items: center;
+}
+.user_tel {
+    width: 137px;
+    height: 14px;
+    font-size: 14px;
+    margin-top: 21px;
+}
+.user_name {
+    width: 55px;
+}
+.bottom {
+    margin-top: -10px;
+    font-size: 12px;
+}
+.location {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    background-image: linear-gradient(90deg,
+    #6fc2aa 5%,
+    #54b196 100%);
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    border-radius: 50%;
+}
+.more {
+    width: 44px;
+    height: 44px;
+    background-color: pink;
+    text-align: center;
+    line-height: 44px;
+    color: #808080;
+    
+}
+.user {
+    flex: 1;
+}
+.pay {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    width: 100%;/*注意宽度用的是百分比布局 适配所有设备的宽度 占满一行*/
+    height: 80px;
+    background-color: #6c99c5;
+    border-top: 1px solid #ededed;
+}
+.pay .left {
+    font-size: 12px;
+}
+.pay .left i {
+    font-size: 20px;
+}
+.pay .right a {
+    display: block;
+    width: 80px;
+    height: 35px;
+    border-radius: 3px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    color: #fff;
+    line-height: 35px;
+    background-image: linear-gradient(90deg,
+    #6fc2aa 5%,
+    #54b196 100%
+    );
+    margin-right: 26px;
+    
+}

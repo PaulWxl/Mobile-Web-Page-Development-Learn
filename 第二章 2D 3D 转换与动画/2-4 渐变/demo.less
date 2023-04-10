@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+// img {
+    
+// }
+.box {
+    width: 1200px;
+    margin: 100px auto;
+    ul {
+        display: flex;
+        justify-content: space-between;
+    }/*注意，是想让li在一行排，所以得是ul加flex*/
+    ul li {
+        position: relative;
+
+
+
+
+        list-style: none;
+        width: 360px;
+        height: 250px;
+        overflow: hidden;
+        &:hover {
+            img {
+                transform: scale(1.02);
+            }
+            .mask {
+                opacity: 1;
+            }
+            .txt {
+                transform: translateY(-68px);
+            }
+        }
+        // &:last-child {
+        //     margin-right: 0;
+        // }
+    }
+    a {
+        text-decoration: none;
+    }
+    img{
+        width: 350px;
+        height: 247px;
+
+        transition: all .5s;
+    }
+    .mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+
+
+
+
+        width: 350px;
+        height: 247px;
+        background-image: linear-gradient(
+            transparent,
+            rgba(0,0,0,.4)
+        );
+        transition: all .5s;
+        opacity: 0;
+    }
+    .txt {
+
+        position: absolute;
+        left: 0;
+        bottom: -68px;
+
+
+        width: 350px;
+
+        padding: 20px 15px;
+        color: #fff;
+        transition: transform .5s;
+        h4 {
+            font-size: 18px;
+            font-weight: 1000;
+            line-height: 2em;
+            color: #fff;
+        }
+        h5 {
+            width: 50%;
+            font-size: 13px;
+            line-height: 1.5em;
+            color: #fff;
+            margin-bottom: 40px;
+        }
+        p {
+            font-size: 14px;
+            color: #fff;
+            .iconfont {
+                color: #c7000b;
+                vertical-align: middle;
+                font-size: 20px;
+                font-weight: 700;
+            }
+        }
+    }
+    
+}

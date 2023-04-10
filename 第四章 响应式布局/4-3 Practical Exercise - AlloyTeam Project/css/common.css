@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.carousel img {
+  height: 100% !important;
+  width: 2000px;
+  /*img一般设置跟父元素的高度一样，
+        所以先设置一个高度为100%，注意，为了层叠，所以
+        加!important*/
+}
+@media (max-width: 992px) {
+  .carousel .item {
+    height: 400px;
+  }
+}
+@media (max-width: 768px) {
+  .carousel .item {
+    height: 250px;
+  }
+}
+@media (min-width: 992px) {
+  .carousel .item {
+    height: 500px;
+  }
+}
+.carousel .carousel-indicators li {
+  width: 50px;
+  padding: 5px 0;
+  margin: 0 2px;
+  opacity: 0.5;
+  /*其他的(未激活时)设置透明度为0.5*/
+  border: 0;
+  background-color: transparent;
+  height: auto;
+}
+.carousel .carousel-indicators li.active {
+  opacity: 1;
+  /*激活状态时设置透明度为1*/
+}
+.carousel .carousel-indicators li:after {
+  content: "";
+  display: block;
+  /*转换为块元素，设置高度为4px，
+    转换成长条形*/
+  height: 4px;
+  background-color: #fff;
+  border-radius: 4px;
+  /*边框曲率*/
+}
+@keyframes masked-animation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+  .navbar-collapse .navbar-nav .hot,
+  .navbar-collapse .navbar-nav .hot:hover {
+    background-image: -webkit-linear-gradient(left, #cddc39, #ff9800 25%, #cddc39 50%, #ff9800 75%, #cddc39) !important;
+    -webkit-text-fill-color: transparent!important;
+    -webkit-background-clip: text!important;
+    -webkit-background-size: 200% 100%!important;
+    -webkit-animation: masked-animation 2s infinite linear !important;
+  }
+}
+.navbar-default {
+  background-color: transparent !important;
+  /*透明色的背景颜色*/
+  border: 0;
+  /*border必须添加0，
+    因为bootstrap.min.css中设置了border，必须层叠掉，
+    不写层叠不掉*/
+}
+.navbar-default .navbar-nav li {
+  margin-top: 12px !important;
+}
+.navbar-default .navbar-nav li a {
+  color: #fff !important;
+  font-size: 16px;
+}
+.navbar-default .navbar-nav a:hover {
+  color: orange !important;
+}
+.navbar-default .navbar-nav .hot {
+  margin-right: 22px;
+  font-size: 18px;
+}
+.project {
+  text-align: center;
+  line-height: 1.5em;
+  padding-top: 18px;
+}
+.project .container {
+  padding-top: 15px;
+}
+.project .container .row div:nth-child(1),
+.project .container .row div:nth-child(2),
+.project .container .row div:nth-child(3) {
+  margin-top: 6px;
+}
+.project .container .row div:nth-child(4),
+.project .container .row div:nth-child(5),
+.project .container .row div:nth-child(6) {
+  margin-top: 28px;
+}
+.project .container .row a {
+  display: block;
+  width: 100%;
+  /*占盒子宽度的100%*/
+  height: 190px;
+  /*给子元素设置高度，父元素的高度会被迫增大*/
+  background-color: skyblue;
+  line-height: 200px;
+}
+.project .caret {
+  cursor: pointer;
+}

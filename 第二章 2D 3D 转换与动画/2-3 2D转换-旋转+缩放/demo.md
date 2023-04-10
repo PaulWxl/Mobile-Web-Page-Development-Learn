@@ -1,0 +1,36 @@
+- 注意img标签和background-image的区别是
+- 对img标签设置width或height可以自动帮你等比例缩放图片，但是background-image不行 如果设置width或者height就会有固定的尺寸，显示不全图片，比如只显示一半或者1/4
+- 所以img更智能化一点
+- 设置旋转
+- 仍然是transform属性
+- 属性值为： rotate()
+- 括号内为旋转的度数： 例如30deg、360deg、90deg
+- 注意，想要看到旋转效果必须给元素本身加过渡transition！！！
+- 注意：旋转效果一般是配合伪类hover，所以rotate是在hover上加
+- 注意， 如果img不设置宽高，仍然可以显示，就按照图片的原宽高显示，但是background-image如果不设置宽高的话，就无法显示图片！！！所以background-image要用的话一定要设置宽高！！!
+- 注意deg必须加，而且正数为顺时针，负数为逆时针
+
+- 使用transform-origin属性改变旋转中心
+- 取值： 方位名词（left,top,right,bottom,center） 最常用
+- 或者 坐标点的像素 用pxcook量取旋转中心的坐标
+- 注意改变旋转中心这个不是在hover上加，而是在这个旋转的元素本身身上加
+- 注意transition和transform-origin都是在元素本身身上加，但只有transformrotate在hover上加
+- 一定要注意transform的层叠性的影响！！！特别容易覆盖，如果不想被覆盖就写在一行上，用空格空起来，注意因为旋转会改变主轴侧轴方向，所以如果多重转换，比如位移和旋转共同使用的时候，必须要把旋转放在后面，还有一个原因是位移也是相对主轴侧轴的方向位移的，注意多重属性使用空格空起来，而不是逗号
+- translate只写一个值时默认是主轴方向的位移
+- 缩放：
+- transform: scale(缩放倍数) 大于1就是放大 小于1就是缩小
+- opacity: 透明度（范围是从0到1的一个数字）  0最透明 1最不透明
+- 注意宽度的等比例缩放，必须对img标签加，对嵌套它的盒子加都不行！！！！只有img有这样的功能！！牛逼！！！
+- scale缩放的倍数允许是两位小数
+- img图片上是不允许加伪类的，afterbefore！！！确实不行，无法在img上面直接加伪类，除非img外面嵌套一个div，在div上面加伪类才行！！！麻了！！！
+- 如果使用img的等比例缩放特性，如果只对width火堆height的其中一个设置200px，那么会把另一个自动设置成200px，保留正方形效果！！！
+- 注意less语法中不一定要给子类全部加类名才可以选择，直接写标签也可以！！这个方法不错！！！
+- 注意把一开始的picbefore设置成透明度为0 opacity0
+- 在lihover中把pichbefore的透明度设置为1
+- 因为是picbefore缩放，所以在它本身上设置transition
+- 初始把picbefore设置为transformscale(8)  然后lihover时再设置picbefore为transformscale(1) 
+- 伪类的父元素是给谁添加了伪类，谁就是这个伪类的父元素
+- 注意使用beforeafter伪类时一定要加content属性
+- 注意像今天那个播放器play的效果，就没有再弄一个盒子，而是在img外面套一层div，然后在div上加before再添加背景图片background-image，因为单纯的img是加不了伪类beforeafter的，而且一定要记得有背景图片一定要设置宽高,有背景图片如果不设置宽高的图片根本出不来，这和img不一样,而且img如果不设置宽高就是跟图片原大小一样，如果设置了宽高会等比例缩放，但是background-image不会，可能图片就会放大不完整，img的宽高还可以百分比布局，即相对于父元素的宽高而言。
+- 常用套路外面套个盒子可以设置宽高然后img可以用百分比布局，
+或者把盒子宽高设置成跟img的宽高一致，这样也就看不出来外面套了个盒子，可以在外面的盒子加一个background-color作为检查的颜色

@@ -1,0 +1,44 @@
+{
+  "id": "3453734",
+  "name": "开发部",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "32783460",
+      "name": "天气_暴雨",
+      "font_class": "tianqi_baoyu",
+      "unicode": "e98a",
+      "unicode_decimal": 59786
+    },
+    {
+      "icon_id": "32783461",
+      "name": "天气_冰雹",
+      "font_class": "tianqi_bingbao",
+      "unicode": "e98b",
+      "unicode_decimal": 59787
+    },
+    {
+      "icon_id": "32783462",
+      "name": "天气_大风",
+      "font_class": "tianqi_dafeng",
+      "unicode": "e98c",
+      "unicode_decimal": 59788
+    },
+    {
+      "icon_id": "5401581",
+      "name": "APP开发",
+      "font_class": "APPkaifa",
+      "unicode": "ec23",
+      "unicode_decimal": 60451
+    },
+    {
+      "icon_id": "7554468",
+      "name": "集成开发",
+      "font_class": "jichengkaifa",
+      "unicode": "e7ad",
+      "unicode_decimal": 59309
+    }
+  ]
+}

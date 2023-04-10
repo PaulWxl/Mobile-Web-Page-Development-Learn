@@ -1,0 +1,48 @@
+.box {
+    position: relative;
+    width: 1366px;
+    height: 600px;
+    background-image: url(../images/bg.jpg);
+    /*注意这里必须写的是相对common.css而言的路径*/
+    margin: 100px auto;
+    overflow: hidden;
+    
+
+    .left {
+        position: absolute;
+        /*注意，如果使用子绝父相，必须要使用子绝父相*/
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background-image: url(../images/fm.jpg);
+        
+    }
+
+    .right {
+        position: absolute;
+        /*注意，如果使用子绝父相，必须要使用子绝父相*/
+        right: 0;
+        background: url(../images/fm.jpg) no-repeat -683px 0px ;
+        width: 50%;
+        height: 100%;
+    }
+    &:hover {
+        .left {
+            transition: all 2s;
+            transform: translateX(-100%);
+            // visibility: hidden;
+            /*注意过渡是给要过渡的元素自身
+            transform: translateX(-100%);
+            /*translate是相对于自身的宽高*/
+        }
+        .right {
+            transition: all 2s;
+            transform: translateX(100%);
+            // visibility: hidden;
+
+            /*translate是相对于自身的宽高*/
+        }
+        
+    }
+   
+}

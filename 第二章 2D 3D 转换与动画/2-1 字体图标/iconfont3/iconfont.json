@@ -1,0 +1,30 @@
+{
+  "id": "3766302",
+  "name": "部门",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1343591",
+      "name": "线描色彩－办公室",
+      "font_class": "icon-test",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "1789478",
+      "name": "开发中",
+      "font_class": "kaifazhong",
+      "unicode": "e6c5",
+      "unicode_decimal": 59077
+    },
+    {
+      "icon_id": "7738016",
+      "name": "运营",
+      "font_class": "yunying",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    }
+  ]
+}

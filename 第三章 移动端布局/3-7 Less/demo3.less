@@ -1,0 +1,26 @@
+@import './demo2.less';
+@import './demo.less';
+
+@colora: green;
+
+.father {
+    color: @colora;
+    .son {
+        color: @colora;
+    }
+}
+
+.box {
+    background-color: @colora;
+    .aaa {
+        color: @colora;
+    }
+}
+
+.xtx-main-nav {
+    width: 200 + 10px;
+    height: 200 + 20px;
+
+    width: (68 / 37.5rem);
+    height: (34 / 37.5rem);
+}

@@ -1,0 +1,15 @@
+- 背景图片默认是从左上角开始的，他的那两个图片是特定选好的，想要实现父元素宽度的一半，直接width,height百分比布局，width50%，高度是height100%
+- 注意必须写的是相对common.css而言的路径
+- 注意，如果使用子绝父相，必须要使用子绝父相
+- 注意过渡是给要过渡的元素自身写transition
+- transform: translateX(-100%);
+- translate是相对于自身的宽高
+- 精灵图实现右边是一半 在pxcook测量坐标 用坐标点标注量取 总长1366px 一半是683px 0px 注意是相反数
+- 注意background的连写的默认值的影响
+- 左半部分是左浮动，右半部分是右浮动
+- 注意写的是background-image还是background，而且要注意连写形式
+- 最后想要移动后不显示加上overflowhiddem
+- 注意overflowhidden是给父元素box加
+- 注意我试了一下visibilityhidden效果也是可以的，但和overflowhidden最终的效果还是不太一样，测试了一下，确实效果不一样，visibility是先移动后看不见，但是overflowhidden是超出了box的宽度就看不见了
+- overflow
+overflow 是 CSS 的简写属性，其设置了元素溢出时所需的行为——即当元素的内容太大而无法适应它的块级格式化上下文时。

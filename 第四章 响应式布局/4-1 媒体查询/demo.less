@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*min-width从小到大写*/
+// @media (max-width: 768px) {
+//     body {
+//         background-color: pink;
+//     }
+// }
+
+// @media (min-width: 992px) {
+//     body {
+//         background-color: green;
+//     }
+// }
+
+// @media (min-width: 1200px) {
+//     body {
+//         background-color: skyblue;
+//     }
+// }
+
+
+
+.box {
+    display: flex;
+    width: 100%;
+    .left {
+        width: 300px;
+        min-height: 500px;
+        background-color: pink;
+    }
+    .main {
+        flex: 1;/*除去left，剩下的全部是main*/
+        min-height: 500px;
+        background-color: skyblue;
+    }
+}
+
+// 媒体查询，隐藏内容
+@media (max-width: 768px) {
+    .left {
+        display: none;/*隐藏用display：none*/
+    }
+}

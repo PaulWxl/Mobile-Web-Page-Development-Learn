@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.box {
+  width: 1200px;
+  margin: 100px auto;
+  /*注意，是想让li在一行排，所以得是ul加flex*/
+}
+.box ul {
+  display: flex;
+  justify-content: space-between;
+}
+.box ul li {
+  position: relative;
+  list-style: none;
+  width: 360px;
+  height: 250px;
+  overflow: hidden;
+}
+.box ul li:hover img {
+  transform: scale(1.02);
+}
+.box ul li:hover .mask {
+  opacity: 1;
+}
+.box ul li:hover .txt {
+  transform: translateY(-68px);
+}
+.box a {
+  text-decoration: none;
+}
+.box img {
+  width: 350px;
+  height: 247px;
+  transition: all 0.5s;
+}
+.box .mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 350px;
+  height: 247px;
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.4));
+  transition: all 0.5s;
+  opacity: 0;
+}
+.box .txt {
+  position: absolute;
+  left: 0;
+  bottom: -68px;
+  width: 350px;
+  padding: 20px 15px;
+  color: #fff;
+  transition: transform 0.5s;
+}
+.box .txt h4 {
+  font-size: 18px;
+  font-weight: 1000;
+  line-height: 2em;
+  color: #fff;
+}
+.box .txt h5 {
+  width: 50%;
+  font-size: 13px;
+  line-height: 1.5em;
+  color: #fff;
+  margin-bottom: 40px;
+}
+.box .txt p {
+  font-size: 14px;
+  color: #fff;
+}
+.box .txt p .iconfont {
+  color: #c7000b;
+  vertical-align: middle;
+  font-size: 20px;
+  font-weight: 700;
+}

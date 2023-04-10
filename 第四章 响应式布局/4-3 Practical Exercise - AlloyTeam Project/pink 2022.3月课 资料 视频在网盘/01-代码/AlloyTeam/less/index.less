@@ -1,0 +1,109 @@
+// 修改轮播图的小圆点
+.carousel-indicators li,
+.carousel-indicators .active {
+  width: 50px;
+  height: 4px;
+  border: 0;
+  background-color: rgba(255,255,255, .5);
+  margin: 0 2px;
+}
+
+.carousel-indicators .active {
+  background-color: #fff;
+}
+// 导航条
+.navbar-default {
+  background-color: transparent;
+  border-color: transparent;
+}
+.navbar-default .navbar-nav>li>a {
+  color: #fff;
+  font-size: 16px;
+  margin: 0 10px;
+}
+.navbar-default .navbar-nav>li>a:hover {
+  color: orangered;
+
+}
+.navbar-nav {
+  margin-top: 15px;
+}
+// 当我们页面处于超小屏幕下 小于 768时候，底色是黑色
+@media (max-width: 992px) {
+  .navbar-default .navbar-collapse {
+    background-color: #333;
+    text-align: center;
+  }
+}
+// 标题部分
+.title {
+  margin-top: 50px;
+  text-align: center;
+  p {
+    font-size: 16px;
+    color: #999;
+    margin-top: 12px;
+  }
+}
+// 栅格响应4个端
+.items {
+  > div {
+    height: 179px;
+    margin-bottom: 30px;
+    a {
+      overflow: hidden;
+      position: relative;
+      display: block;
+      height: 100%;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #fff;
+      text-align: center;
+      padding-top: 20px;
+      // 过渡
+      transition: all .3s;
+      // 伪元素
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -110%;
+        width: 100%;
+        height: 100%;
+        // 倾斜
+        transform: skew(-30deg);
+        // 背景渐变
+        background-image: linear-gradient(to right, transparent, rgba(255,255,255, .6) , transparent);
+       
+      }
+      &:hover::before {
+         // 过渡写到hover身上，这样之后鼠标经过才过渡
+        transition: all .3s;
+        left: 110%;
+      }
+      img {
+        height: 60px;
+      }
+      // 鼠标经过
+      &:hover {
+        box-shadow: 0 26px 40px -24px rgb(0 36 100 / 50%);
+        transform: translateY(-6px);
+      }
+    }
+
+    &:nth-child(1) a {
+      background-color: #7ec3ff;
+    }
+     &:nth-child(2) a {
+      background-color: #f36c80;
+    }
+     &:nth-child(3) a {
+      background-color: #818ea0;
+    }
+     &:nth-child(4) a {
+      background-color: #91cf49;
+    }
+  }
+
+ 
+}

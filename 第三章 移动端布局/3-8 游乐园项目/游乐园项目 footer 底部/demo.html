@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./base.css">
+    <link rel="stylesheet" href="./lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="./demo.css">
+    
+</head>
+<body>
+    <!-- 底部 -->
+    <footer class="footer">
+        <a href="#" >
+            <i class="iconfont icon-shouye"></i>
+            <p>首页</p>
+        </a>
+        <a href="#">
+            <i class="iconfont icon-kaquan"></i>
+            <p>卡券</p>
+        </a>
+        <a href="#">
+            <i class="iconfont icon-wode"></i>
+            <p>我的</p>
+        </a>
+    </footer>
+
+
+    <script>
+        //这里用了一个排他思想：核心：每次选中都要先把所有的样式置为空 
+        //然后再把当前选中的这个置为 需要的样式
+
+        // 先获取页面中所有的a对象
+        var as = document.querySelectorAll('a')
+
+        // 用for循环为所有的a绑定事件 每点击一个a后 先全部清空样式 只想让选定的a变色
+        for (let i = 0; i < as.length; i++) {
+            as[i].onclick = function() {
+
+                // 先把所有的a的颜色去掉 
+                for (let i = 0; i < as.length; i++) {
+                    as[i].style.color = ''
+                }
+                // 再给选中的赋值
+                as[i].style.color = '#fff'
+
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.img-one {
+    width: 650px;
+    height: 650px;
+    background-image: url(../images/rotate.png);
+    transition: all 1s;
+    &:hover {
+        transform: rotate(360deg);
+    }
+}
+.img-two {
+    // width: 250px;
+    // height: 50px;
+    transition: all 1s;
+    &:hover {
+        transform: rotate(360deg);
+    }
+}
+.img-three {
+    width: 200px;
+    height: 200px;
+    margin: 100px auto;
+    transition: all 3s;
+    &:hover {
+        transform: rotate(-300deg);
+    }
+}
+.box-one {
+    width: 300px;
+    height: 300px;
+    border: 1px solid #000;
+    margin: 100px auto;
+    transform-origin: right bottom;
+    transition: all 2s;
+    .img-four {
+        width: 300px;
+        transition: all 2s;
+        transform-origin: center;
+    } 
+    &:hover {
+        transform: rotate(360deg);
+        .img-four:hover {
+            transform: rotate(360deg);
+        }
+    }  
+}
+
+.box-two {
+    width: 1500px;
+    border: 1px solid #000;
+    margin: 100px auto;
+    .img-four {
+        transition: all 2s;
+        &:hover {
+            transform: translate(1200px) rotate(360deg)
+        }
+    }
+}
+.box-three {
+    width: 450px;
+    height: 314px;
+    margin: 50px auto;
+    // background-color: pink;
+    overflow: hidden;
+
+    img {  
+        width: 100%;
+        
+    }
+    li {
+        list-style: none;
+        /*lihover时picbefore变小*/
+        &:hover .pic::before {
+            opacity: 1;/*设置lihover时picbefore透明度为1*/
+            transform: scale(1);
+        }
+    }
+    p {
+        color: #3b3b3b;
+        padding: 20px 10px 0 20px;
+        text-align: center;
+        font-size: 20px;
+    }
+    .pic {
+        position: relative;
+    }
+    .pic::before {
+        content: '';
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        margin-top: -29px;
+        margin-left: -29px;
+        width: 58px;
+        height: 58px;
+        background-image: url(../images/play.png);
+        /*起始状态*/
+        transform: scale(8);
+        transition: all .5s;
+        opacity: 0;/*设置一开始透明度为0*/
+    }
+}
+
+// .box-four-test {
+//     width: 58px;
+//     height: 58px;
+//     background-image: url(../images/play.png);
+// }
+
+.box-four-test {
+    img {
+        width: 100px;
+    }
+}
+
+
+
+
+
+// .img-test {
+//     position: relative;
+//     height: 300px;
+//     &::before {
+//         content: '1231241';
+//         position: absolute;
+//         top: 50%;
+//         left: 50%;
+//         transform: translate(-50%,-50%);
+//     }
+// }
+
+

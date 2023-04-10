@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/*min-width从小到大写*/
+.box {
+  display: flex;
+  width: 100%;
+}
+.box .left {
+  width: 300px;
+  min-height: 500px;
+  background-color: pink;
+}
+.box .main {
+  flex: 1;
+  /*除去left，剩下的全部是main*/
+  min-height: 500px;
+  background-color: skyblue;
+}
+@media (max-width: 768px) {
+  .left {
+    display: none;
+    /*隐藏用display：none*/
+  }
+}

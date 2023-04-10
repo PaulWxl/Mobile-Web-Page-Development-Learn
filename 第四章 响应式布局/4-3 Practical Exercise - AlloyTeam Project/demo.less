@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+// banner图
+.carousel {
+    img {
+        height: 100% !important;
+        width: 2000px;
+        /*img一般设置跟父元素的高度一样，
+        所以先设置一个高度为100%，注意，为了层叠，所以
+        加!important*/
+    }
+
+    // 如果视口<768, 图高250px ，max-width
+    // 如果视口<992, 图高400px ，max-width
+    // 如果视口>992, 图高500px , min-width
+    // 写媒体查询,注意顺序
+    @media (max-width: 992px) {
+        // 修改父元素的高度，img跟着父元素的高度被修改，
+        // 这就是设置img的height为100%的原因
+        .item {
+            height: 400px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .item {
+            height: 250px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .item {
+            height: 500px;
+        }
+    }
+}
+// banner图
+
+
+
+// banner图的按钮样式
+
+.carousel .carousel-indicators li {
+    width: 50px;
+    padding: 5px 0;
+    margin: 0 2px;
+    opacity: .5;/*其他的(未激活时)设置透明度为0.5*/
+    border: 0;
+    background-color: transparent;
+    height: auto;
+}
+
+
+.carousel .carousel-indicators li.active {
+
+     opacity: 1;/*激活状态时设置透明度为1*/
+}
+
+.carousel .carousel-indicators li:after {
+    content: "";
+    display: block;/*转换为块元素，设置高度为4px，
+    转换成长条形*/
+    height: 4px;
+    background-color: #fff;
+    border-radius: 4px;/*边框曲率*/
+}
+
+// banner图按钮样式
+
+
+
+// 登陆按钮渐变样式
+// 定义动画
+@keyframes masked-animation {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+    .navbar-collapse .navbar-nav .hot, .navbar-collapse .navbar-nav .hot:hover {
+        background-image: -webkit-linear-gradient(
+            left,
+            #cddc39,
+            #ff9800 25%,
+            #cddc39 50%,
+            #ff9800 75%,
+            #cddc39)!important;
+        -webkit-text-fill-color: transparent!important;
+        -webkit-background-clip: text!important;
+        -webkit-background-size: 200% 100%!important;
+        -webkit-animation: masked-animation 2s infinite linear!important;
+    }
+}
+
+// 登陆按钮渐变样式
+
+
+// 头部
+.navbar-default {
+    background-color: transparent !important;/*透明色的背景颜色*/
+    border: 0;
+    /*border必须添加0，
+    因为bootstrap.min.css中设置了border，必须层叠掉，
+    不写层叠不掉*/
+    .navbar-nav {
+        li {
+            margin-top: 12px !important;
+            // vertical-align: baseline !important;
+
+        }
+        li a {
+            color: #fff !important;
+            font-size: 16px;
+        }
+        a:hover {
+            color: orange !important;
+        }
+        .hot {
+            margin-right: 22px;
+            font-size: 18px;
+        }
+        
+    }
+
+}
+// 头部
+
+
+
+// 开源项目区域
+.project {
+    // 一上来别的先不管，控制行内内容居中对齐,可以用
+    //text-align:center 只改变块元素中的行内内容的对齐方式，并不改变
+    //块元素的对齐方式
+    text-align: center;
+    line-height: 1.5em;
+    padding-top: 18px;
+
+    .container {
+        padding-top: 15px;
+        .row {
+            // margin-top: 10px;
+            // background-color: pink;/*加背景色的目的都是为了辅助观察，用完就拆桥*/
+            // height: 200px;
+            div:nth-child(1), div:nth-child(2), div:nth-child(3) {
+                margin-top: 6px;
+            }
+            div:nth-child(4), div:nth-child(5), div:nth-child(6) {
+                margin-top: 28px;
+            }
+            a {
+                // a标签是行内元素，如果要设置宽高，先转换为块元素
+                display: block;
+                width: 100%;/*占盒子宽度的100%*/
+                // 可以不给高，如果不给高度就默认是由内容撑开，要么就是具体测量出高度
+                height: 190px;/*给子元素设置高度，父元素的高度会被迫增大*/
+                // height: 100%;
+                background-color: skyblue;
+                line-height: 200px;
+            }
+        }
+        
+    }
+    .caret {
+        cursor: pointer;
+    }
+}
+// 开源项目区域

@@ -1,0 +1,9 @@
+- 添加近大远小的透视效果
+- 父级加perspective：...px
+- 叫做视距，眼睛距离屏幕的距离
+- 一般perspective取值为800-1200px 比较符合人的习惯
+- 一般取1000px就可以了
+- 只有在父级加perspective才可以看到空间转换的位移效果（z轴）
+- transform:translateZ()
+- 3d转换（x，y，z轴上的位移）
+- z轴的正方向垂直纸面向上
